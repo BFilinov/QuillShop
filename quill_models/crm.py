@@ -7,7 +7,10 @@ class Client(auth.User):
     pass
 
 
-class UserDiscount(models.Model):
+class ClientDiscount(models.Model):
+    client = models.ForeignKey('Client', related_name='discounts')
+    discount_amount = models.DecimalField(null=False, default=0)
+    is_active = models.BooleanField(null=False, default=False)
     pass
 
 
