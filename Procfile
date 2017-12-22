@@ -1,1 +1,1 @@
-web: python manage.py runserver 8097
+web: gunicorn quill_project.wsgi
