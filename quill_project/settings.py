@@ -116,8 +116,6 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = 'C:\\Users\\Amaterasu\\Django2\\StaticRoot'
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'quill_app/templates'),)
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
