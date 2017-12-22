@@ -1,9 +1,11 @@
-body {
+/*body {
     margin: 10pt;
     padding: 3pt;
     overflow: auto;
     font-family: "Segoe UI";
     height: 95%;
+    width: 78%;
+    max-width: 987px;
 }
 
 menu-left {
@@ -33,17 +35,16 @@ header .title a:visited {
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    justify-self: flex-end;
-    align-items: baseline;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 75%;
+    text-align: center;
 }
 
-footer div {
+footer nav {
     margin: 20pt;
     display: block;
-    max-width: 70%;
-
 }
 
 .grid {
@@ -60,4 +61,4 @@ footer div {
     width: 120pt;
     height: 180pt;
 
-}
+}*/

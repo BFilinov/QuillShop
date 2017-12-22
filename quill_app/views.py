@@ -4,19 +4,9 @@ from quill_models.products import Product
 
 def index(request):
     query = Product.objects.all()
-    return render(request, 'quill_app/index.html', {'prod': query})
-
-
-def cart(request):
-    return render(request, 'quill_app/index.html')
-
-
-def contacts(request):
-    return render(request, 'quill_app/index.html')
-
-
-def profile(request):
-    return render(request, 'quill_app/index.html')
+    current_user = request.user
+    print(current_user)
+    return render(request, 'quill_app/index.html', {'prod': query, 'current_user': current_user})
 
 
 def product(request):
@@ -26,5 +16,3 @@ def product(request):
         return render(request, 'quill_app/productview.html', {'item': item})
 
 
-def authorize(request):
-    pass
