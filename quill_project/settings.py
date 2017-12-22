@@ -24,7 +24,7 @@ SECRET_KEY = 's#+f28^r@&om+)90fh*_vnjly&*+o1qzmoqaw1g^bau0ba!cie'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['damp-scrubland-81242.herokuapp.com']
 
 # Application definition
 
