@@ -4,20 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Quill Internet Store</title>
-    <link rel="stylesheet" href="{% static 'quill_app/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'quill_app/tacit.min.css' %}">
     <script type="text/javascript" src="{% static 'quill_app/jquery-3.2.1.min.js' %}"></script>
 </head>
 <body>
-<header>
-    <span>Quill Store LOL</span>
-
-</header>
+    <div class="title"><a href="{% url 'index' %}">Quill Store</a></div>
+    <div>World's largest computer parts store</div>
 <main>
+<nav>
+    <div>this is filter panel</div>
+</nav>
+<div id="main">
     {% block content %}
     {% endblock %}
+</div>
 </main>
 <footer>
-
+    <div>
+        <nav>
+            <ul>
+                <li>Start page</li>
+                <li>Prev page</li>
+                <li>4</li>
+                <li>Next page</li>
+                <li>Last page</li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        Copyright HyperFashionDesigns (c) 2017
+    </div>
 </footer>
 
 </body>

@@ -14,13 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-import quill_app.views as views
+from django.shortcuts import resolve_url
+from django.urls import path, include
+from quill_app import views as q
+from quill_access import views as qa
 
+app_name = 'quill_app'
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('Admin/', admin.site.urls),
-    path('OrderCart/', views.cart, name='cart'),
-    path('About/', views.contacts, name='about'),
-    path('Profile/', views.profile, name='profile')
+    path('admin/', admin.site.urls),
+    path('', q.index, name='index'),
+    path('product/<int:prod_id>', q.product, name='product'),
+    path('register/', qa.register, name='register')
 ]

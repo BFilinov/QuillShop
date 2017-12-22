@@ -1,0 +1,12 @@
+{% extends 'quill_app/base.html' %}
+<p>{{ item.product_category.category_name }}</p>
+<h1>
+    {{ item.product_title }}
+</h1>
+<div>
+    {{ item.product_price }}
+</div>
+
+<img src="{{ item.image_url }}">
+
+<p>{{ item.product_description }}</p>

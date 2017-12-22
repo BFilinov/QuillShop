@@ -1,8 +1,9 @@
-html, body, form {
-    margin: 0;
-    padding: 0;
+body {
+    margin: 10pt;
+    padding: 3pt;
     overflow: auto;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Segoe UI";
+    height: 95%;
 }
 
 menu-left {
@@ -16,9 +17,47 @@ menu-left {
     float: right;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    height: 25pt;
-    width: 100%;
+header .title {
+    text-align: center;
+    font-size: 24pt;
+}
+
+header .title a {
+    color: blue;
+    font-style: normal;
+}
+
+header .title a:visited {
+    color: blue;
+    font-style: normal;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    justify-self: flex-end;
+    align-items: baseline;
+}
+
+footer div {
+    margin: 20pt;
+    display: block;
+    max-width: 70%;
+
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+
+.grid-item {
+    display: inline-block;
+}
+
+.grid-image {
+    width: 120pt;
+    height: 180pt;
+
 }
