@@ -24,7 +24,7 @@ SECRET_KEY = 's#+f28^r@&om+)90fh*_vnjly&*+o1qzmoqaw1g^bau0ba!cie'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['damp-scrubland-81242.herokuapp.com']
 
 # Application definition
 
@@ -115,7 +115,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'quill_app/templates'),)
+STATIC_ROOT = 'C:\\Users\\Amaterasu\\Django2\\StaticRoot'
 
 DATABASES = {
     'default': {
