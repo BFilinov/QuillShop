@@ -4,9 +4,7 @@ from quill_models.products import Product
 
 def index(request):
     query = Product.objects.all()
-    current_user = request.user
-    print(current_user)
-    return render(request, 'quill_app/index.html', {'prod': query, 'current_user': current_user})
+    return render(request, 'quill_app/index.html', {'prod': query, 'current_user': request.user})
 
 
 def product(request):

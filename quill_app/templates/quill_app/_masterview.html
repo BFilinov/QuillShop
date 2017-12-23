@@ -1,13 +1,15 @@
 {% extends 'quill_app/_base.html' %}
 {% block authorization %}
-    {% if not current_user.is_anonymous %}
-        <div>Welcome, <a href="{% url 'profile' %}">{{ current_user }}</a></div>
-    {% else %}
-        <div>
-            <input type="submit" value="Sign in" data-method="{% url 'login' %}"/>
-            <input type="submit" value="Register" data-method="{% url 'register' %}"/>
-        </div>
-    {% endif %}
+    <div style="width:100%; top:0; position: fixed; margin: .3em;border: 1px solid lightgray; border-radius: 5px; padding: .2em">
+        {% if not current_user.is_anonymous %}
+            <span>Welcome, <a href="{% url 'profile' %}">{{ current_user }}</a></span>
+        {% else %}
+            <span>
+                <a class="button" href="{% url 'login' %}"> Sign in</a>
+                <a class="button" href="{% url 'register' %}">Sign up</a>
+            </span>
+        {% endif %}
+    </div>
 {% endblock %}
 {% block master %}
     <nav>
@@ -17,17 +19,4 @@
         {% block content %}
         {% endblock %}
     </div>
-{% endblock %}
-{% block paging %}
-    <nav>
-        <div>
-            <ul>
-                <li>Start page</li>
-                <li>Prev page</li>
-                <li>4</li>
-                <li>Next page</li>
-                <li>Last page</li>
-            </ul>
-        </div>
-    </nav>
 {% endblock %}

@@ -1,12 +1,14 @@
 {% extends 'quill_app/_masterview.html' %}
-<p>{{ item.product_category.category_name }}</p>
-<h1>
-    {{ item.product_title }}
-</h1>
-<div>
-    {{ item.product_price }}
-</div>
+{% block content %}
+    <p>{{ item.product_category.category_name }}</p>
+    <h1>
+        {{ item.product_title }}
+    </h1>
+    <div>
+        {{ item.product_price }}
+    </div>
 
-<img src="{{ item.image_url }}">
+    <img src="{{ item.image_url }}">
 
-<p>{{ item.product_description }}</p>
+    <p>{{ item.product_description }}</p>
+{% endblock %}

@@ -15,14 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import CreateView
 from quill_app import views as q
 from quill_access import views as auth_views
+from quill_access.forms import UserCreationForm, LoginForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', q.index, name='index'),
     path('product/<int:prod_id>', q.product, name='product'),
-    path('register', auth_views.register, name='register'),
-    path('profile', auth_views.profile, name='profile'),
-    path('login', auth_views.login, name='login'),
+    path('register/', CreateView.as_view(
+        template_name='quill_access/register.html',
+        form_class=UserCreationForm,
+        success_url='/'
+    ), name='register'),
+    path('login/', CreateView.as_view(template_name='quill_access/login.html', form_class=LoginForm, success_url='/'),
+         name='login'),
+    path('profile/', auth_views.profile, name='profile'),
 ]

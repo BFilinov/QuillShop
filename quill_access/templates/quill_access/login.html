@@ -1,11 +1,10 @@
 {% extends 'quill_app/_base.html' %}
-
 {% block master %}
-    <div style="width:50%; margin-left: 15rem" class="wrapper">
+    <div>
         <form class="inner" action="{{ form_url }}" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Register">
+            <input type="submit" value="Sign in">
         </form>
     </div>
 {% endblock %}
